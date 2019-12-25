@@ -1,0 +1,251 @@
+
+body{
+   min-width: 700px; /* Suppose you want minimum width of 1000px */
+}
+
+.self-nav  {
+			font-family: 'Roboto Mono';
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            width: 100%;
+            position: fixed;
+            top:0px;
+            display: block;
+            z-index: 1;
+            
+        }
+
+.self-nav li {
+            float: left;
+            border-right: 1px solid rgba(0, 0, 0, 1)
+        }
+
+.self-nav li:last-child {
+            border-right: none;
+        }
+
+.self-nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 9px 16px;
+            text-decoration: none;
+        }
+
+.self-nav li a:hover:not(.active) {
+            background-color: rgba(52, 57, 65, 0.9);
+        }
+
+.self-nav .active {
+			background-color: rgba(71, 69, 69, 0.9);
+			
+        }
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 42px; /* Stay at the top */
+  left: 8px;
+  background-color: rgb(181, 183, 184); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+@font-face {
+	font-family: 'Roboto Mono';
+	src: local('Roboto Mono'), local('RobotoMono-Regular'), url('../fonts/spectral/Spectral-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Roboto Mono Bold';
+	src: local('Roboto Mono Bold'), local('RobotoMono-Bold'), url('../fonts/spectral/Spectral-Bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 500;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #050505;
+  display: block;
+}
+.sidenav a:hover {
+  color: #5664a7;
+  font-size: 16px;
+}
+
+
+.sections {
+  padding-top: 8em;
+  padding-left: 16em;  
+  padding-right: 5em;
+
+}
+
+.sections p {
+  font-family: 'Roboto Mono';
+            overflow: hidden; 
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0);
+            height: auto;
+            
+            
+}
+.sections h1 {
+  font-family: 'Roboto Mono';
+            overflow: hidden; 
+            z-index: 0;
+            background-color: rgba(255, 255, 255, 0);
+            height: auto;
+            padding: 0.5em;
+}
+
+.sections .section1 {
+  background-image: url("../images/sample1.jpg");
+  background-size: cover;
+  /* background-color: rgba(126, 252, 0, 0.432); */
+  /* width:100%; */
+  height:500px;
+  padding-bottom: 1em;
+  display: block;
+  position: relative;
+}
+.sections .section2 {
+  background-image: url("../images/sample2.jpg");
+  background-size: auto 100%;
+  /* background-color: rgba(126, 252, 0, 0.432); */
+  /* width:100%; */
+  height:500px;
+  padding-bottom: 1em;
+  display: block;
+  position: relative;
+}
+
+.sections p{
+  position: relative;
+  text-align: center;
+  background-color: rgba(203, 218, 188, 0.705);
+  padding: 2em 2em;
+  top:5em;
+}
+
+#projects {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+  line-height: 0;
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 2em;
+}
+#projects a {
+  overflow: hidden;
+  position: relative;
+}
+#projects a img {
+	width: 100%;
+	transform: scale(1.0);
+  transition: 0.15s transform;
+  opacity: 1;
+}
+
+#projects a:hover img {
+  transform: scale(1.08);
+  opacity: 0.2;
+}
+
+#projects a .middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#projects a:hover .middle{
+  opacity:1;
+}
+#projects a .text {
+  font-family: 'Roboto Mono Bold';
+  color: rgb(0, 0, 0);
+}
+
+@media all and ( min-width: 1500px ) {
+	#projects {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+@media all and ( min-width: 1700px ) {
+
+	#projects {
+		grid-template-columns: repeat(7, 1fr);
+	}
+}
+
+@media all and ( min-width: 1900px ) {
+
+	#projects {
+		grid-template-columns: repeat(8, 1fr);
+	}
+
+}
+
+@media all and ( max-width: 1300px ) {
+	#projects {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media all and ( max-width: 1100px ) {
+	#projects {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media all and ( max-width: 1000px ) {
+	#projects {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media all and ( max-width: 850px ) {
+	#projects {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media all and ( max-width: 700px ) {
+	#projects {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+/* 
+.block{
+  display: block;
+  position: absolute;
+	top:0;
+	bottom: 0;
+	left: 160px;
+  right: 0;
+  width: 70%;
+	height: 500px;
+  background-image: url('../images/sample1.jpg');
+  background-color: rgba(126, 252, 0, 0.527);
+  background-size: 100% 100%;
+	margin: 5em auto;
+} */
+
+/* ---------------------------------------------------------------------------------------- */
